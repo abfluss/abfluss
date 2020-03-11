@@ -97,7 +97,7 @@ export class FlowApiClient {
     }
 
     public getActivityTimelineForDay(date: FlowDate,
-        sampleCount: number = 50000): Promise<IDaySummary> {
+                                     sampleCount: number = 50000): Promise<IDaySummary> {
         const url: URL = this.createBaseUrl();
         url.pathname = '/api/activity-timeline/load';
         url.searchParams.set('day', date.toString());
