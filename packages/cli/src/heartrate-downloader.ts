@@ -1,4 +1,8 @@
-import { FlowDate } from "@donmahallem/flow-api-types";
+/*!
+ * Source https://github.com/abfluss/abfluss Package: cli
+ */
+
+import { FlowDate } from "@abfluss/api-types";
 
 export class HeartRateDownloader {
 
@@ -9,6 +13,8 @@ export class HeartRateDownloader {
         const convStartDate: FlowDate = (startdate instanceof FlowDate) ? startdate : FlowDate.fromString(startdate);
         const convEndDate: FlowDate = (enddate instanceof FlowDate) ? enddate : FlowDate.fromString(enddate);
         const downloadDates: FlowDate[] = FlowDate.toDateArray(convStartDate, convEndDate);
+        // tslint:disable-next-line:no-console
+        console.log(downloadDates);
         setTimeout(() => {
 
         }, throttle);

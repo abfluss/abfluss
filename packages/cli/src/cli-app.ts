@@ -1,4 +1,7 @@
-import * as yargs from "yargs";
+/*!
+ * Source https://github.com/abfluss/abfluss Package: cli
+ */
+
 interface ICliArgs {
     enddate?: string;
     startdate: string;
@@ -21,5 +24,7 @@ export class CliApp {
     }
     public start(): void {
 
+        // tslint:disable-next-line:no-console
+        console.log('yes', this.args.samples);
     }
 }
