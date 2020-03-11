@@ -16,4 +16,4 @@ describe('flow-api-client', (): void => {
             });
         });
     });
-});
+})
