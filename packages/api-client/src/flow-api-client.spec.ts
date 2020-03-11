@@ -1,12 +1,11 @@
-import * as flowApiClient from './flow-api-client';
+/*!
+ * Source https://github.com/abfluss/abfluss Package: api-client
+ */
+
 import { expect } from 'chai';
 // if you used the '@types/mocha' method to install mocha type definitions, uncomment the following line
 import 'mocha';
-import * as request from 'request';
-import * as sinon from 'sinon';
-import { URL } from "url";
-import { beforeEach } from 'mocha';
-import { FlowDate } from '@donmahallem/flow-api-types';
+import * as flowApiClient from './flow-api-client';
 
 describe('flow-api-client', (): void => {
     describe('FlowApiClient', (): void => {
@@ -16,4 +15,4 @@ describe('flow-api-client', (): void => {
             });
         });
     });
-})
+});

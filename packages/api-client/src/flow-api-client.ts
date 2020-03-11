@@ -1,5 +1,5 @@
 /*!
- * Source https://github.com/donmahallem/FlowApi
+ * Source https://github.com/abfluss/abfluss Package: api-client
  */
 
 import {
@@ -9,20 +9,20 @@ import {
     ISleepInterval,
     ISleepNearby,
     ISleepReport,
-} from "@donmahallem/flow-api-types";
-import * as request from "request";
-import * as requestPromise from "request-promise-native";
-import { URL } from "url";
+} from '@abfluss/api-types';
+import * as request from 'request';
+import * as requestPromise from 'request-promise-native';
+import { URL } from 'url';
 
 export class FlowApiClient {
     private cookieJar: request.CookieJar = request.jar();
-    private mUserAgent: string = "Mozilla/5.0";
+    private mUserAgent: string = 'Mozilla/5.0';
     private requestClient: requestPromise.RequestPromiseAPI;
     constructor() {
         this.requestClient = requestPromise.defaults({
             headers: {
-                "accept": "application/json",
-                "user-agent": this.userAgent,
+                'accept': 'application/json',
+                'user-agent': this.userAgent,
             },
             jar: this.cookieJar,
         });
@@ -49,13 +49,13 @@ export class FlowApiClient {
         const data: any = {
             email: mail,
             password,
-            returnUrl: "/",
+            returnUrl: '/',
         };
         return this.requestClient.post({
             form: data,
-            uri: "https://flow.polar.com/login",
+            uri: 'https://flow.polar.com/login',
         })
-            .catch((err) => {
+            .catch((err: any): Promise<any> => {
                 if (err && err.response && err.response.statusCode === 303) {
                     return Promise.resolve(err.response);
                 }
@@ -65,24 +65,24 @@ export class FlowApiClient {
 
     public getSleep(id: number | string): Promise<ISleepInterval[]> {
         const getSleepUrl: URL = this.createBaseUrl();
-        getSleepUrl.pathname = "/api/sleep/" + id;
+        getSleepUrl.pathname = '/api/sleep/' + id;
         return this.get(getSleepUrl);
     }
 
     public getSleepNearby(date: FlowDate): Promise<ISleepNearby> {
         const url: URL = this.createBaseUrl();
-        url.pathname = "/api/sleep/nights/nearby";
-        url.searchParams.set("date", date.toString());
+        url.pathname = '/api/sleep/nights/nearby';
+        url.searchParams.set('date', date.toString());
         return this.get(url);
     }
 
     public getSleepReport(from: FlowDate, to: FlowDate): Promise<ISleepReport[]> {
-        return this.requestClient.get("https://sleep.flow-prd.api.polar.com/api/sleep/report?from=" +
-            from.toString() + "&to=" + to.toString());
+        return this.requestClient.get('https://sleep.flow-prd.api.polar.com/api/sleep/report?from=' +
+            from.toString() + '&to=' + to.toString());
     }
-    public getHistory(from: FlowDate, to: FlowDate, userId, types?: number[]): Promise<IHistoryItem[]> {
+    public getHistory(from: FlowDate, to: FlowDate, userId: string, types?: number[]): Promise<IHistoryItem[]> {
         const url: URL = this.createBaseUrl();
-        url.pathname = "/api/training/history";
+        url.pathname = '/api/training/history';
         const reqBody: any = {
             fromDate: from.toString(),
             sportIds: types,
@@ -93,15 +93,15 @@ export class FlowApiClient {
     }
 
     public createBaseUrl(): URL {
-        return new URL("https://flow.polar.com/");
+        return new URL('https://flow.polar.com/');
     }
 
     public getActivityTimelineForDay(date: FlowDate,
-                                     sampleCount: number = 50000): Promise<IDaySummary> {
+        sampleCount: number = 50000): Promise<IDaySummary> {
         const url: URL = this.createBaseUrl();
-        url.pathname = "/api/activity-timeline/load";
-        url.searchParams.set("day", date.toString());
-        url.searchParams.set("maxSampleCount", sampleCount.toString(10));
+        url.pathname = '/api/activity-timeline/load';
+        url.searchParams.set('day', date.toString());
+        url.searchParams.set('maxSampleCount', sampleCount.toString(10));
         return this.get(url);
     }
     /**
