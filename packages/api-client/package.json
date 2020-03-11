@@ -1,6 +1,6 @@
 {
     "name": "@abfluss/api-client",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Api Client and helper for FlowApi",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -48,7 +48,7 @@
         "typescript": "~3.6.4"
     },
     "dependencies": {
-        "@abfluss/api-types": "~0.0.1",
+        "@abfluss/api-types": "^0.1.0",
         "jsonschema": "~1.2.4",
         "request": "~2.88.0",
         "request-promise-native": "~1.0.7"
