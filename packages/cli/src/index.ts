@@ -28,7 +28,7 @@ const inputArgs: any = yargs((process.argv.slice(2)))
             type: 'number',
         });
 
-    }, (argv) => {
+    }, (argv: any): void => {
         const dateRegex: RegExp = /^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/;
         if (!dateRegex.test(argv.startdate)) {
             throw new Error('The provided startDate does not seem valid');

@@ -4,7 +4,7 @@
 
 import { HeartRateDownloader } from './heartrate-downloader';
 
-export const heartrateHandler = (argv) => {
+export const heartrateHandler = (argv: any): void => {
     console.log('Handler called', argv);
     const dateRegex: RegExp = /^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/;
     if (!dateRegex.test(argv.startdate)) {
