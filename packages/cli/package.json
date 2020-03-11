@@ -1,0 +1,68 @@
+{
+    "name": "@abfluss/cli",
+    "version": "0.1.0",
+    "description": "Cli for FlowApi",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "private": false,
+    "keywords": [
+        "flow",
+        "polar",
+        "api",
+        "types"
+    ],
+    "homepage": "https://abfluss.github.io/abfluss/",
+    "author": {
+        "name": "donmahallem",
+        "email": "donmahallem@users.noreply.github.com",
+        "url": "https://github.com/donmahallem"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/abfluss/abfluss/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/abfluss/abfluss.git"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@types/chai": "~4.2.4",
+        "@types/mocha": "~5.2.7",
+        "@types/node": "~12.11.7",
+        "@types/set-cookie-parser": "~0.0.5",
+        "@types/sinon": "~7.5.0",
+        "chai": "~4.2.0",
+        "mocha": "~6.2.2",
+        "nyc": "~14.1.1",
+        "request-debug": "~0.2.0",
+        "sinon": "~7.5.0",
+        "ts-node": "~8.4.1",
+        "tslint": "~5.20.0",
+        "typescript": "~3.6.4"
+    },
+    "dependencies": {
+        "@abfluss/api-types": "~0.1.0",
+        "@abfluss/api-client": "~0.1.0",
+        "@types/yargs": "~13.0.3",
+        "yargs": "~14.2.0"
+    },
+    "files": [
+        "dist/*",
+        "src/*"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "mocha --config ../../.mocharc.yml",
+        "test:watch": "mocha --config ../../.mocharc.yml --watch",
+        "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
+        "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
+        "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
+        "docs": "typedoc --options ../../typedoc.json"
+    }
+}
