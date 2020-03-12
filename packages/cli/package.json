@@ -47,8 +47,9 @@
         "typescript": "~3.6.4"
     },
     "dependencies": {
-        "@abfluss/api-types": "~0.2.0",
         "@abfluss/api-client": "~0.2.0",
+        "@abfluss/api-types": "~0.2.0",
+        "@abfluss/util": "~0.2.0",
         "@types/yargs": "~13.0.3",
         "yargs": "~14.2.0"
     },
