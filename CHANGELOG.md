@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/abfluss/abfluss/compare/v0.1.1...v0.2.0) (2020-03-12)
+
+
+### build
+
+* add changelogPreset default to lerna.json ([e2f487b](https://github.com/abfluss/abfluss/commit/e2f487b7e8eb5a3bd1959cef8901603eb4341196))
+* lerna config extended for version and publish ([837255c](https://github.com/abfluss/abfluss/commit/837255cd1acffafb69d0a22e27df35367f19d892))
+
+### chore
+
+* update CHANGELOG files with eslint style ([ef4c287](https://github.com/abfluss/abfluss/commit/ef4c287da86f004386015bdf8951988680e4368b))
+
+
+
+
+
 ## [0.1.2](https://github.com/abfluss/abfluss/compare/v0.1.1...v0.1.2) (2020-03-12)
 
 
