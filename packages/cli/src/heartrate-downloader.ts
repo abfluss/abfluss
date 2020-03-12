@@ -20,11 +20,12 @@ export class HeartRateDownloader {
             if (i > 0) {
                 await sleep(throttle);
             }
-            console.log(chalk.italic('Downloading:') + ' ' + chalk.red.bold(downloadDate.toString()));
+            this.download(downloadDate, samples);
         }
     }
 
-    public download(startdate: string, samples: number): void {
+    public async download(downloadDate: FlowDate, samples: number): Promise<void> {
+        console.log(chalk.italic('Downloading:') + ' ' + chalk.red.bold(downloadDate.toString()));
 
     }
 }
