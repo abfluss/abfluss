@@ -51,7 +51,7 @@
         "@abfluss/api-client": "~0.2.0",
         "@abfluss/api-types": "~0.2.0",
         "@abfluss/util": "~0.2.0",
-        "@types/yargs": "~13.0.3",
+        "@types/yargs": "~15.0.4",
         "chalk": "^3.0.0",
         "yargs": "~14.2.0"
     },
