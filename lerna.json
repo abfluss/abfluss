@@ -15,6 +15,7 @@
     },
     "version": {
       "conventionalCommits": true,
+      "changelogPreset": "conventional-changelog-eslint",
       "message": "chore(release): publish %s"
     }
   }
