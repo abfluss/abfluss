@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "conventional-changelog-eslint": "^3.0.4",
     "lerna": "^3.20.2"
   },
   "scripts": {

@@ -1,21 +1,28 @@
-# Change Log
+# [](https://github.com/abfluss/abfluss/compare/v0.1.1...v) (2020-03-12)
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+### build
+
+* lerna config extended for version and publish ([837255c](https://github.com/abfluss/abfluss/commit/837255cd1acffafb69d0a22e27df35367f19d892))
+
+
 
 ## [0.1.1](https://github.com/abfluss/abfluss/compare/v0.1.0...v0.1.1) (2020-03-11)
 
-**Note:** Version bump only for package root
 
 
 
+# [0.1.0](https://github.com/abfluss/abfluss/compare/a9ea1c565722a6dda00056419e7a07d1574d3870...v0.1.0) (2020-03-11)
 
 
-# 0.1.0 (2020-03-11)
+### build
+
+* fix lint config for spec files ([7b1046d](https://github.com/abfluss/abfluss/commit/7b1046de0dfe0a2d110b8a3c6c579777b523147f))
+
+### chore
+
+* add general config files ([a9ea1c5](https://github.com/abfluss/abfluss/commit/a9ea1c565722a6dda00056419e7a07d1574d3870))
+* fix lerna project version ([a0e5168](https://github.com/abfluss/abfluss/commit/a0e51685c933604d2b8003576b794bf5a833bd0e))
 
 
-### Features
 
-* **api-client:** added api-client ([e16fb46](https://github.com/abfluss/abfluss/commit/e16fb46be6e231da5f5300a2ee640e1189610335))
-* **api-types:** Added Api Types ([#3](https://github.com/abfluss/abfluss/issues/3)) ([0cd6a24](https://github.com/abfluss/abfluss/commit/0cd6a24386f602c6b27a61f26b9d94dff99d554e))
-* **api-types:** Added Api Types ([#3](https://github.com/abfluss/abfluss/issues/3)) ([02b5b74](https://github.com/abfluss/abfluss/commit/02b5b749d71faedf53e7dcc3811ac819f8924381))

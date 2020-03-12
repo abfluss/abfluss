@@ -2,5 +2,21 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.1.1"
+  "version": "0.1.1",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md",
+        "tslint.json",
+        "tsconfig.json"
+      ],
+      "message": "chore(release): publish %s"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "changelogPreset": "conventional-changelog-eslint",
+      "message": "chore(release): publish %s"
+    }
+  }
 }
