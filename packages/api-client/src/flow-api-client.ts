@@ -3,13 +3,13 @@
  */
 
 import {
-    FlowDate,
     IDaySummary,
     IHistoryItem,
     ISleepInterval,
     ISleepNearby,
     ISleepReport,
 } from '@abfluss/api-types';
+import { FlowDate } from '@abfluss/util';
 import * as request from 'request';
 import * as requestPromise from 'request-promise-native';
 import { URL } from 'url';
@@ -97,7 +97,7 @@ export class FlowApiClient {
     }
 
     public getActivityTimelineForDay(date: FlowDate,
-                                     sampleCount: number = 50000): Promise<IDaySummary> {
+        sampleCount: number = 50000): Promise<IDaySummary> {
         const url: URL = this.createBaseUrl();
         url.pathname = '/api/activity-timeline/load';
         url.searchParams.set('day', date.toString());
