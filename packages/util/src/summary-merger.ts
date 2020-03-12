@@ -1,8 +1,8 @@
 /*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+ * Source https://github.com/abfluss/abfluss Package: util
  */
 
-import { IDayData, IDaySummary } from './model';
+import { IDayData, IDaySummary } from '@abfluss/api-types';
 
 export class SummaryMerger {
     private data: IDaySummary = {};

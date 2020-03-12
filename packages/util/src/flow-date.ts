@@ -1,5 +1,5 @@
 /*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+ * Source https://github.com/abfluss/abfluss Package: util
  */
 
 export class FlowDate {
