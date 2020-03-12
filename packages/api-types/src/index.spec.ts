@@ -9,6 +9,6 @@ import * as index from './index';
 describe('index', (): void => {
     it('should contain FlowApiValidator', (): void => {
         // tslint:disable-next-line:no-unused-expression
-        expect(index.FlowApiValidator).to.exist;
+        expect(index.ACTIVITY_GRAPH_DATA_SCHEMA).to.exist;
     });
 });
