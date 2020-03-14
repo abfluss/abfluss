@@ -32,7 +32,7 @@
         "access": "public"
     },
     "devDependencies": {
-        "@types/chai": "~4.2.4",
+        "@types/chai": "~4.2.11",
         "@types/mocha": "~5.2.7",
         "@types/node": "~13.9.1",
         "@types/set-cookie-parser": "~0.0.5",
