@@ -9,7 +9,7 @@ import { createSigninMiddleware } from './signin-middleware';
 
 // tslint:disable-next-line:
 const inputArgs: any = yargs((process.argv.slice(2)))
-    .command('download heartrate <startdate> [enddate]', 'the serve command', (args: yargs.Argv) => {
+    .command('download heartrate <startdate> [enddate]', 'the serve command', (args: yargs.Argv): any => {
         return yargs.option('samples', {
             default: 50000,
             description: 'The number of samples for heartrate to download',

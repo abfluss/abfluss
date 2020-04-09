@@ -15,7 +15,7 @@ export class HeartRateDownloader {
         const downloadDates: FlowDate[] = FlowDate.toDateArray(convStartDate, convEndDate);
         // tslint:disable-next-line:no-console
         console.log(downloadDates);
-        setTimeout(() => {
+        setTimeout((): void => {
 
         }, throttle);
     }
