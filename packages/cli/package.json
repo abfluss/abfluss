@@ -32,11 +32,7 @@
         "access": "public"
     },
     "devDependencies": {
-        "@types/chai": "~4.2.11",
-        "@types/mocha": "~7.0.2",
-        "@types/node": "~13.11.1",
-        "@types/set-cookie-parser": "~0.0.5",
-        "@types/sinon": "~9.0.0",
+        "@types/yargs": "~15.0.4",
         "chai": "~4.2.0",
         "mocha": "~7.1.1",
         "nyc": "~15.0.1",
@@ -51,7 +47,6 @@
         "@abfluss/api-client": "~0.2.0",
         "@abfluss/api-types": "~0.2.0",
         "@abfluss/util": "~0.2.0",
-        "@types/yargs": "~15.0.4",
         "chalk": "~4.0.0",
         "yargs": "~15.3.1"
     },
