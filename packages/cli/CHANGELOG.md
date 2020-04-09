@@ -9,12 +9,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### chore
 
 * fix deps ([84b977b](https://github.com/abfluss/abfluss/commit/84b977bbe10ffed455b26d50823489ec55a6f3ad))
-
-
-
-
-
-
-# [0.2.0](https://github.com/abfluss/abfluss/compare/v0.1.1...v0.2.0) (2020-03-12)
-
-**Note:** Version bump only for package @abfluss/util
