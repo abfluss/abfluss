@@ -1,6 +1,6 @@
 {
     "name": "@abfluss/util",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Utils for FlowApi",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -42,7 +42,7 @@
         "typescript": "~3.9.5"
     },
     "dependencies": {
-        "@abfluss/api-types": "^0.2.1"
+        "@abfluss/api-types": "^0.2.2"
     },
     "files": [
         "dist/*",
