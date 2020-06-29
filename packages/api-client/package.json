@@ -55,7 +55,10 @@
         "src/*"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "npm run build:esm && npm run build:cjs && npm run build:types",
+        "build:esm": "tsc --project ./tsconfig.json --module es2015 --outDir dist/esm",
+        "build:cjs": "tsc --project ./tsconfig.json --module commonjs --outDir dist/cjs",
+        "build:types": "tsc --project ./tsconfig.json  -d --declarationDir dist/types --declarationMap --emitDeclarationOnly",
         "test": "mocha --config ../../.mocharc.yml",
         "test:watch": "mocha --config ../../.mocharc.yml --watch",
         "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
