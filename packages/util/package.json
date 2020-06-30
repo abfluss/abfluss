@@ -1,6 +1,6 @@
 {
     "name": "@abfluss/util",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Utils for FlowApi",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -43,7 +43,7 @@
         "typescript": "~3.9.5"
     },
     "dependencies": {
-        "@abfluss/api-types": "^0.2.2"
+        "@abfluss/api-types": "^0.2.3"
     },
     "files": [
         "dist/*",
