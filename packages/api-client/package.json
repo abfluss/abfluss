@@ -2,8 +2,9 @@
     "name": "@abfluss/api-client",
     "version": "0.2.2",
     "description": "Api Client and helper for FlowApi",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
     "private": false,
     "keywords": [
         "flow",
