@@ -47,7 +47,7 @@
     "dependencies": {
         "@abfluss/api-types": "^0.2.3",
         "@abfluss/util": "^0.2.3",
-        "jsonschema": "~1.2.8",
+        "jsonschema": "~1.2.9",
         "request": "~2.88.0",
         "request-promise-native": "~1.0.9"
     },
