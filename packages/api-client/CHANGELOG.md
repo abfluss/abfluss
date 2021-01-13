@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/abfluss/abfluss/compare/v0.2.3...v0.2.4) (2021-01-13)
+
+
+### Bug Fixes
+
+* **deps:** bump jsonschema from 1.2.10 to 1.2.11 ([#190](https://github.com/abfluss/abfluss/issues/190)) ([dd2dbd9](https://github.com/abfluss/abfluss/commit/dd2dbd9590d51a68b47072f52fb91fe123f64864))
+* **deps:** bump jsonschema from 1.2.11 to 1.3.0 ([#196](https://github.com/abfluss/abfluss/issues/196)) ([0df8c00](https://github.com/abfluss/abfluss/commit/0df8c00bdc1ad8a86dd400deda2213ca3dc144cd))
+* **deps:** bump jsonschema from 1.2.6 to 1.2.7 ([#175](https://github.com/abfluss/abfluss/issues/175)) ([8d9a7d2](https://github.com/abfluss/abfluss/commit/8d9a7d220a73726550ed6991cade964cb3efedf7))
+* **deps:** bump jsonschema from 1.2.7 to 1.2.8 ([#179](https://github.com/abfluss/abfluss/issues/179)) ([6eff0eb](https://github.com/abfluss/abfluss/commit/6eff0eb5808c9ef2bfd9a894ea4b0a17a75e5d1a))
+* **deps:** bump jsonschema from 1.2.8 to 1.2.10 ([#186](https://github.com/abfluss/abfluss/issues/186)) ([1f90d43](https://github.com/abfluss/abfluss/commit/1f90d4378c623619a3b819133ba10ab750f8c433))
+* **deps:** bump jsonschema from 1.3.0 to 1.4.0 ([#199](https://github.com/abfluss/abfluss/issues/199)) ([9cb248b](https://github.com/abfluss/abfluss/commit/9cb248b8ba6373080cac5ec1488d746de16bc7f4))
+* **deps:** bump request-promise-native from 1.0.8 to 1.0.9 ([#132](https://github.com/abfluss/abfluss/issues/132)) ([2a7afb9](https://github.com/abfluss/abfluss/commit/2a7afb91c7a068d06c68079536e0b6bb3e0578c4))
+
+
+
+
+
+
 ## [0.2.3](https://github.com/abfluss/abfluss/compare/v0.2.2...v0.2.3) (2020-06-30)
 
 **Note:** Version bump only for package @abfluss/api-client

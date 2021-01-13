@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/abfluss/abfluss/compare/v0.2.3...v0.2.4) (2021-01-13)
+
+
+### Bug Fixes
+
+* **deps:** bump jsonschema from 1.2.10 to 1.2.11 ([#190](https://github.com/abfluss/abfluss/issues/190)) ([dd2dbd9](https://github.com/abfluss/abfluss/commit/dd2dbd9590d51a68b47072f52fb91fe123f64864))
+* **deps:** bump jsonschema from 1.2.11 to 1.3.0 ([#196](https://github.com/abfluss/abfluss/issues/196)) ([0df8c00](https://github.com/abfluss/abfluss/commit/0df8c00bdc1ad8a86dd400deda2213ca3dc144cd))
+* **deps:** bump jsonschema from 1.2.6 to 1.2.7 ([#175](https://github.com/abfluss/abfluss/issues/175)) ([8d9a7d2](https://github.com/abfluss/abfluss/commit/8d9a7d220a73726550ed6991cade964cb3efedf7))
+* **deps:** bump jsonschema from 1.2.7 to 1.2.8 ([#179](https://github.com/abfluss/abfluss/issues/179)) ([6eff0eb](https://github.com/abfluss/abfluss/commit/6eff0eb5808c9ef2bfd9a894ea4b0a17a75e5d1a))
+* **deps:** bump jsonschema from 1.2.8 to 1.2.10 ([#186](https://github.com/abfluss/abfluss/issues/186)) ([1f90d43](https://github.com/abfluss/abfluss/commit/1f90d4378c623619a3b819133ba10ab750f8c433))
+* **deps:** bump jsonschema from 1.3.0 to 1.4.0 ([#199](https://github.com/abfluss/abfluss/issues/199)) ([9cb248b](https://github.com/abfluss/abfluss/commit/9cb248b8ba6373080cac5ec1488d746de16bc7f4))
+* **deps:** bump request-promise-native from 1.0.8 to 1.0.9 ([#132](https://github.com/abfluss/abfluss/issues/132)) ([2a7afb9](https://github.com/abfluss/abfluss/commit/2a7afb91c7a068d06c68079536e0b6bb3e0578c4))
+* **deps:** bump yargs from 15.3.1 to 15.4.1 ([#124](https://github.com/abfluss/abfluss/issues/124)) ([c5fc564](https://github.com/abfluss/abfluss/commit/c5fc56432a88a1c47a0c504112a1e6d8a98ec8cb))
+* **deps:** bump yargs from 15.4.1 to 16.0.3 ([#163](https://github.com/abfluss/abfluss/issues/163)) ([444d0fb](https://github.com/abfluss/abfluss/commit/444d0fb636a6c3056508f24acd80553f2aff9817))
+* **deps:** bump yargs from 16.0.3 to 16.1.0 ([#191](https://github.com/abfluss/abfluss/issues/191)) ([0e56001](https://github.com/abfluss/abfluss/commit/0e5600150d68ae8c5cc2581016e2533ca310ffb7))
+* **deps:** bump yargs from 16.1.0 to 16.1.1 ([#210](https://github.com/abfluss/abfluss/issues/210)) ([c734d1a](https://github.com/abfluss/abfluss/commit/c734d1a7d74b987c857b89392fc5f3aa2b51edfc))
+* **deps:** bump yargs from 16.1.1 to 16.2.0 ([#226](https://github.com/abfluss/abfluss/issues/226)) ([322137f](https://github.com/abfluss/abfluss/commit/322137f6e507b315312bdf1752075a3a422e78bb))
+
+
+
+
+
+
 ## [0.2.3](https://github.com/abfluss/abfluss/compare/v0.2.2...v0.2.3) (2020-06-30)
 
 
