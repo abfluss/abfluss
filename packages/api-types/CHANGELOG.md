@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.5](https://github.com/abfluss/abfluss/compare/v0.2.4...v0.2.5) (2021-01-23)
+
+**Note:** Version bump only for package @abfluss/api-types
+
+
+
+
+
+
 ## [0.2.4](https://github.com/abfluss/abfluss/compare/v0.2.3...v0.2.4) (2021-01-13)
 
 
