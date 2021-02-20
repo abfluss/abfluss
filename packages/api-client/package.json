@@ -46,7 +46,7 @@
         "@abfluss/api-types": "^0.2.5",
         "@abfluss/util": "^0.2.5",
         "jsonschema": "~1.4.0",
-        "request": "~2.88.0",
+        "request": "~2.88.2",
         "request-promise-native": "~1.0.9"
     },
     "files": [
