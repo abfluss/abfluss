@@ -21,7 +21,7 @@ export class FlowApiClient {
     constructor() {
         this.requestClient = requestPromise.defaults({
             headers: {
-                'accept': 'application/json',
+                accept: 'application/json',
                 'user-agent': this.userAgent,
             },
             jar: this.cookieJar,
