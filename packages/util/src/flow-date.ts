@@ -52,11 +52,11 @@ export class FlowDate {
 
     public toString(): string {
         let output: string = '';
-        output += ('' + this.year).padStart(4, '0');
+        output += (`${this.year}`).padStart(4, '0');
         output += '-';
-        output += ('' + this.month).padStart(2, '0');
+        output += (`${this.month}`).padStart(2, '0');
         output += '-';
-        output += ('' + this.day).padStart(2, '0');
+        output += (`${this.day}`).padStart(2, '0');
         return output;
     }
 

@@ -3,7 +3,7 @@
  */
 
 import { FlowApiClient } from '@abfluss/api-client';
-import * as yargs from 'yargs';
+import yargs from 'yargs';
 import { HeartRateDownloader } from './heartrate-downloader';
 import { createSigninMiddleware } from './signin-middleware';
 
