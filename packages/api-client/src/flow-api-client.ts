@@ -65,7 +65,7 @@ export class FlowApiClient {
 
     public getSleep(id: number | string): Promise<ISleepInterval[]> {
         const getSleepUrl: URL = this.createBaseUrl();
-        getSleepUrl.pathname = '/api/sleep/' + id;
+        getSleepUrl.pathname = `/api/sleep/${id}`;
         return this.get(getSleepUrl);
     }
 
@@ -77,8 +77,7 @@ export class FlowApiClient {
     }
 
     public getSleepReport(from: FlowDate, to: FlowDate): Promise<ISleepReport[]> {
-        return this.requestClient.get('https://sleep.flow-prd.api.polar.com/api/sleep/report?from=' +
-            from.toString() + '&to=' + to.toString());
+        return this.requestClient.get(`https://sleep.flow-prd.api.polar.com/api/sleep/report?from=${from.toString()}&to=${to.toString()}`);
     }
     public getHistory(from: FlowDate, to: FlowDate, userId: string, types?: number[]): Promise<IHistoryItem[]> {
         const url: URL = this.createBaseUrl();
