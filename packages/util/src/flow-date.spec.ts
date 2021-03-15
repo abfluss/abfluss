@@ -102,15 +102,15 @@ describe('flow-date.ts', (): void => {
     describe('class methods', (): void => {
         describe('get date', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it('should parse ' + testDate.date + ' from ' + testDate.from, (): void => {
+                it(`should parse ${testDate.date} from ${testDate.from}`, (): void => {
                     expect(testDate.from.date.getTime()).to.equal(testDate.date.getTime());
                 });
             });
         });
         describe('nextDay()', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it('it should skip correctly from ' + testDate.from.toString()
-                    + ' to ' + testDate.to.toString(), (): void => {
+                it(`it should skip correctly from ${testDate.from.toString()}`
+                    + ` to ${testDate.to.toString()}`, (): void => {
                         const calculatedDate: testObject.FlowDate = testDate.from.nextDay();
                         expect(calculatedDate.day).to.equal(testDate.to.day);
                         expect(calculatedDate.month).to.equal(testDate.to.month);
@@ -120,8 +120,8 @@ describe('flow-date.ts', (): void => {
         });
         describe('previousDay()', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it('it should skip correctly from ' + testDate.from.toString()
-                    + ' to ' + testDate.to.toString(), (): void => {
+                it(`it should skip correctly from ${testDate.from.toString()}`
+                    + ` to ${testDate.to.toString()}`, (): void => {
                         const calculatedDate: testObject.FlowDate = testDate.to.previousDay();
                         expect(calculatedDate.day).to.equal(testDate.from.day);
                         expect(calculatedDate.month).to.equal(testDate.from.month);
@@ -131,7 +131,7 @@ describe('flow-date.ts', (): void => {
         });
         describe('toString()', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it('should format ' + testDate.date + ' to ' + testDate.str, (): void => {
+                it(`should format ${testDate.date} to ${testDate.str}`, (): void => {
                     expect(testDate.from.toString()).to.equal(testDate.str);
                 });
             });
