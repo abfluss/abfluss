@@ -1,6 +1,6 @@
 {
     "name": "@abfluss/api-client",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "description": "Api Client and helper for FlowApi",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -43,8 +43,8 @@
         "tslint": "6.1.3"
     },
     "dependencies": {
-        "@abfluss/api-types": "^0.2.5",
-        "@abfluss/util": "^0.2.5",
+        "@abfluss/api-types": "^0.2.6",
+        "@abfluss/util": "^0.2.6",
         "jsonschema": "~1.4.0",
         "request": "~2.88.2",
         "request-promise-native": "~1.0.9"
