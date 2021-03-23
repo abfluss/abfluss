@@ -35,6 +35,7 @@
     "dependencies": {
         "@abfluss/api-types": "^0.2.6",
         "@abfluss/util": "^0.2.6",
+        "axios": "~0.21.1",
         "jsonschema": "~1.4.0"
     },
     "files": [
