@@ -32,16 +32,10 @@
     "publishConfig": {
         "access": "public"
     },
-    "devDependencies": {
-        "@types/request": "2.48.5",
-        "@types/request-promise-native": "1.0.17"
-    },
     "dependencies": {
         "@abfluss/api-types": "^0.2.6",
         "@abfluss/util": "^0.2.6",
-        "jsonschema": "~1.4.0",
-        "request": "~2.88.2",
-        "request-promise-native": "~1.0.9"
+        "jsonschema": "~1.4.0"
     },
     "files": [
         "dist/*",
