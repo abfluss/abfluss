@@ -36,7 +36,9 @@
         "@abfluss/api-types": "^0.2.6",
         "@abfluss/util": "^0.2.6",
         "axios": "~0.21.1",
-        "jsonschema": "~1.4.0"
+        "axios-cookiejar-support": "^1.0.1",
+        "jsonschema": "~1.4.0",
+        "tough-cookie": "^4.0.0"
     },
     "files": [
         "dist/*",
@@ -53,5 +55,8 @@
         "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
         "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
         "docs": "typedoc --options ../../typedoc.json"
+    },
+    "devDependencies": {
+        "@types/tough-cookie": "^4.0.0"
     }
 }
