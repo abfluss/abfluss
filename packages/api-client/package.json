@@ -38,6 +38,7 @@
         "axios": "~0.21.1",
         "axios-cookiejar-support": "^1.0.1",
         "jsonschema": "~1.4.0",
+        "qs": "^6.10.1",
         "tough-cookie": "^4.0.0"
     },
     "files": [
@@ -57,6 +58,7 @@
         "docs": "typedoc --options ../../typedoc.json"
     },
     "devDependencies": {
+        "@types/qs": "^6.9.6",
         "@types/tough-cookie": "^4.0.0"
     }
 }
