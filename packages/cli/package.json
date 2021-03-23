@@ -1,6 +1,6 @@
 {
     "name": "@abfluss/cli",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "description": "Cli for FlowApi",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -36,9 +36,9 @@
         "request-debug": "0.2.0"
     },
     "dependencies": {
-        "@abfluss/api-client": "^0.2.5",
-        "@abfluss/api-types": "^0.2.5",
-        "@abfluss/util": "^0.2.5",
+        "@abfluss/api-client": "^0.2.6",
+        "@abfluss/api-types": "^0.2.6",
+        "@abfluss/util": "^0.2.6",
         "chalk": "~4.1.0",
         "yargs": "~16.2.0"
     },

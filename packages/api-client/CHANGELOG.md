@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/abfluss/abfluss/compare/v0.2.5...v0.2.6) (2021-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency request to ~2.88.2 ([32dd6be](https://github.com/abfluss/abfluss/commit/32dd6be3fba0ae34a78deebdca8e13dea4ebc1c7))
+
+
+
+
+
+
 ## [0.2.5](https://github.com/abfluss/abfluss/compare/v0.2.4...v0.2.5) (2021-01-23)
 
 **Note:** Version bump only for package @abfluss/api-client

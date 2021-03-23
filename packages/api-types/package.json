@@ -1,6 +1,6 @@
 {
     "name": "@abfluss/api-types",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "description": "Api Types and helper for FlowApi",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
