@@ -10,25 +10,29 @@ import {
     ISleepReport,
 } from '@abfluss/api-types';
 import { FlowDate } from '@abfluss/util';
-import * as request from 'request';
-import * as requestPromise from 'request-promise-native';
+import axios, { AxiosInstance, AxiosResponse } from 'axios';
+import axiosCookieJarSupport from 'axios-cookiejar-support';
+import qs from 'qs';
+import { CookieJar } from 'tough-cookie';
 import { URL } from 'url';
 
 export class FlowApiClient {
-    private cookieJar: request.CookieJar = request.jar();
+    private readonly cookieJar: CookieJar;
     private mUserAgent: string = 'Mozilla/5.0';
-    private requestClient: requestPromise.RequestPromiseAPI;
+    private requestClient: AxiosInstance;
     constructor() {
-        this.requestClient = requestPromise.defaults({
+        this.cookieJar = new CookieJar();
+        this.requestClient = axios.create({
             headers: {
                 accept: 'application/json',
                 'user-agent': this.userAgent,
             },
-            jar: this.cookieJar,
         });
+        axiosCookieJarSupport(this.requestClient);
+        this.requestClient.defaults.jar = this.cookieJar;
     }
 
-    public get jar(): request.CookieJar {
+    public get jar(): CookieJar {
         return this.cookieJar;
     }
 
@@ -45,22 +49,20 @@ export class FlowApiClient {
      * @param mail The mail used to login to flow.polar.com
      * @param password the password used to login to flow.polar.com
      */
-    public signin(mail: string, password: string): Promise<request.Response> {
+    public signin(mail: string, password: string): Promise<AxiosResponse> {
         const data: any = {
             email: mail,
             password,
             returnUrl: '/',
         };
-        return this.requestClient.post({
-            form: data,
-            uri: 'https://flow.polar.com/login',
-        })
-            .catch((err: any): Promise<any> => {
-                if (err && err.response && err.response.statusCode === 303) {
-                    return Promise.resolve(err.response);
-                }
-                return Promise.reject(err);
-            });
+        return this.requestClient.post('https://flow.polar.com/login', {
+            data: qs.stringify(data),
+        }).catch((err: any): Promise<any> => {
+            if (err && err.response && err.response.statusCode === 303) {
+                return Promise.resolve(err.response);
+            }
+            return Promise.reject(err);
+        });
     }
 
     public getSleep(id: number | string): Promise<ISleepInterval[]> {
@@ -117,7 +119,7 @@ export class FlowApiClient {
      */
     public post<T, B>(queryUrl: URL, body: B): Promise<T> {
         return this.requestClient.post(queryUrl.toString(), {
-            body,
+            data: body,
         });
     }
 
