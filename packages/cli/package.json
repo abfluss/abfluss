@@ -32,7 +32,7 @@
         "access": "public"
     },
     "devDependencies": {
-        "@types/yargs": "16.0.1",
+        "@types/yargs": "16.0.2",
         "request-debug": "0.2.0"
     },
     "dependencies": {
