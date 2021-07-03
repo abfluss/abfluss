@@ -32,22 +32,14 @@
     "publishConfig": {
         "access": "public"
     },
-    "devDependencies": {
-        "@types/request": "2.48.5",
-        "@types/request-promise-native": "1.0.17",
-        "chai": "4.3.4",
-        "mocha": "8.3.2",
-        "nyc": "15.1.0",
-        "sinon": "9.2.4",
-        "ts-node": "9.1.1",
-        "tslint": "6.1.3"
-    },
     "dependencies": {
         "@abfluss/api-types": "^0.2.6",
         "@abfluss/util": "^0.2.6",
+        "axios": "~0.21.1",
+        "axios-cookiejar-support": "^1.0.1",
         "jsonschema": "~1.4.0",
-        "request": "~2.88.2",
-        "request-promise-native": "~1.0.9"
+        "qs": "^6.10.1",
+        "tough-cookie": "^4.0.0"
     },
     "files": [
         "dist/*",
@@ -63,6 +55,10 @@
         "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
         "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
         "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
-        "docs": "typedoc --options ../../typedoc.json"
+        "docs": "typedoc --options ./typedoc.config.js"
+    },
+    "devDependencies": {
+        "@types/qs": "6.9.6",
+        "@types/tough-cookie": "4.0.1"
     }
 }
