@@ -58,7 +58,7 @@
         "docs": "typedoc --options ./typedoc.config.js"
     },
     "devDependencies": {
-        "@types/qs": "6.9.6",
+        "@types/qs": "6.9.7",
         "@types/tough-cookie": "4.0.1"
     }
 }
