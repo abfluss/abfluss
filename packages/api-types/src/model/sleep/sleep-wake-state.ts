@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+/*
+ * Package @abfluss/api-types
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { SleepWakeStateType } from './sleep-wake-state-type';

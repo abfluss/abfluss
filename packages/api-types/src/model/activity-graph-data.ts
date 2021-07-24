@@ -1,24 +1,13 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+/*
+ * Package @abfluss/api-types
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { Schema } from 'jsonschema';
-import {
-    ACTIVITY_TIMELINE_ICONS_SCHEMA,
-    IActivityTimelineIcons,
-} from './activity-timeline-icons';
-import {
-    HEART_RATE_SUMMARY_SCHEMA,
-    IHeartRateSummary,
-} from './heart-rate-summary';
-import {
-    IStartEndTimePair,
-    START_END_TIME_PAIR_SCHEMA,
-} from './start-end-time-pair';
-import {
-    ITimeValuePair,
-    TIME_VALUE_PAIR_SCHEMA,
-} from './time-value-pair';
+import { ACTIVITY_TIMELINE_ICONS_SCHEMA, IActivityTimelineIcons } from './activity-timeline-icons';
+import { HEART_RATE_SUMMARY_SCHEMA, IHeartRateSummary } from './heart-rate-summary';
+import { IStartEndTimePair, START_END_TIME_PAIR_SCHEMA } from './start-end-time-pair';
+import { ITimeValuePair, TIME_VALUE_PAIR_SCHEMA } from './time-value-pair';
 
 export interface IActivityGraphData {
     heartRateTimelineSamples: ITimeValuePair[];

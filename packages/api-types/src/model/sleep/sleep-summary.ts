@@ -1,16 +1,11 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+/*
+ * Package @abfluss/api-types
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { Schema } from 'jsonschema';
-import {
-    INightSleep,
-    NIGHT_SLEEP_SCHEMA,
-} from './night-sleep';
-import {
-    ISleepEvaluationData,
-    SLEEP_EVALUATION_DATA_SCHEMA,
-} from './sleep-evaluation-data';
+import { INightSleep, NIGHT_SLEEP_SCHEMA } from './night-sleep';
+import { ISleepEvaluationData, SLEEP_EVALUATION_DATA_SCHEMA } from './sleep-evaluation-data';
 /**
  * See {@link SleepSummarySchema}
  */
