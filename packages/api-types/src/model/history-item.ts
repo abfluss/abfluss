@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+/*
+ * Package @abfluss/api-types
+ * Source https://abfluss.github.io/abfluss/
  */
 
 export interface IHistoryItem {
@@ -15,6 +16,7 @@ export interface IHistoryItem {
     sportId: number;
     sportName: string;
     startDate: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     swimDistance?: any;
     swimmingPoolUnits: string;
     swimmingSport: boolean;

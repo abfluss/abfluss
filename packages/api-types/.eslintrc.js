@@ -4,5 +4,8 @@ module.exports = {
     ],
     "rules": {
         "no-multiple-empty-lines": ["error", { "max": 2, "maxBOF": 1 }]
-    }
+    },
+    "parserOptions": {
+        "project": "./tsconfig.lint.json",
+    },
 };

@@ -1,12 +1,10 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+/*
+ * Package @abfluss/api-types
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { Schema } from 'jsonschema';
-import {
-    ISleepSummary,
-    SLEEP_SUMMARY_SCHEMA,
-} from './sleep-summary';
+import { ISleepSummary, SLEEP_SUMMARY_SCHEMA } from './sleep-summary';
 
 /**
  * Schema: {@link SleepNearbySchema}
