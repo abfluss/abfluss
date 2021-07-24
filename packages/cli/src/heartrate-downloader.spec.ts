@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: cli
+/*
+ * Package @abfluss/cli
+ * Source https://abfluss.github.io/abfluss/
  */
 
 describe('heartrate-downloader', (): void => {
