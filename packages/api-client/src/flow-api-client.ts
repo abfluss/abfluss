@@ -1,14 +1,9 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-client
+/*
+ * Package @abfluss/api-client
+ * Source https://abfluss.github.io/abfluss/
  */
 
-import {
-    IDaySummary,
-    IHistoryItem,
-    ISleepInterval,
-    ISleepNearby,
-    ISleepReport,
-} from '@abfluss/api-types';
+import { IDaySummary, IHistoryItem, ISleepInterval, ISleepNearby, ISleepReport } from '@abfluss/api-types';
 import { FlowDate } from '@abfluss/util';
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 import axiosCookieJarSupport from 'axios-cookiejar-support';
@@ -18,7 +13,7 @@ import { URL } from 'url';
 
 export class FlowApiClient {
     private readonly cookieJar: CookieJar;
-    private mUserAgent: string = 'Mozilla/5.0';
+    private mUserAgent = 'Mozilla/5.0';
     private requestClient: AxiosInstance;
     constructor() {
         this.cookieJar = new CookieJar();
@@ -49,20 +44,25 @@ export class FlowApiClient {
      * @param mail The mail used to login to flow.polar.com
      * @param password the password used to login to flow.polar.com
      */
-    public signin(mail: string, password: string): Promise<AxiosResponse> {
-        const data: any = {
+    public async signin(mail: string, password: string): Promise<AxiosResponse<unknown>> {
+        const data: { [key: string]: string } = {
             email: mail,
             password,
             returnUrl: '/',
         };
-        return this.requestClient.post('https://flow.polar.com/login', {
-            data: qs.stringify(data),
-        }).catch((err: any): Promise<any> => {
-            if (err && err.response && err.response.statusCode === 303) {
-                return Promise.resolve(err.response);
-            }
-            return Promise.reject(err);
-        });
+        return this.requestClient
+            .post<unknown>('https://flow.polar.com/login', {
+                data: qs.stringify(data),
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            })
+            .catch((err: any): Promise<AxiosResponse<unknown>> => {
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+                if (err && err.response && err.response.statusCode === 303) {
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+                    return Promise.resolve(err.response);
+                }
+                return Promise.reject(err);
+            });
     }
 
     public getSleep(id: number | string): Promise<ISleepInterval[]> {
@@ -84,7 +84,7 @@ export class FlowApiClient {
     public getHistory(from: FlowDate, to: FlowDate, userId: string, types?: number[]): Promise<IHistoryItem[]> {
         const url: URL = this.createBaseUrl();
         url.pathname = '/api/training/history';
-        const reqBody: any = {
+        const reqBody: { [key: string]: number[] | string | undefined } = {
             fromDate: from.toString(),
             sportIds: types,
             toDate: to.toString(),
@@ -97,8 +97,7 @@ export class FlowApiClient {
         return new URL('https://flow.polar.com/');
     }
 
-    public getActivityTimelineForDay(date: FlowDate,
-        sampleCount: number = 50000): Promise<IDaySummary> {
+    public getActivityTimelineForDay(date: FlowDate, sampleCount = 50000): Promise<IDaySummary> {
         const url: URL = this.createBaseUrl();
         url.pathname = '/api/activity-timeline/load';
         url.searchParams.set('day', date.toString());
@@ -122,5 +121,4 @@ export class FlowApiClient {
             data: body,
         });
     }
-
 }
