@@ -53,8 +53,10 @@
         "test": "mocha --config ../../.mocharc.yml",
         "test:watch": "mocha --config ../../.mocharc.yml --watch",
         "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
-        "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
-        "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
+        "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+        "postlint": "prettier --config ./../../.prettierrc src/**/*.ts --check",
+        "lint:fix": "eslint -c .eslintrc.js --ext .ts ./src --fix",
+        "postlint:fix": "prettier --config ./../../.prettierrc src/**/*.ts --write",
         "docs": "typedoc --options ./typedoc.config.js"
     },
     "devDependencies": {
