@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: util
+/*
+ * Package @abfluss/util
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { expect } from 'chai';
@@ -10,6 +11,7 @@ import * as merger from './summary-merger';
 describe('SummaryMerger', (): void => {
     describe('add', (): void => {
         let mergerInstance: merger.SummaryMerger;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const testData: any = {
             test: 'data',
             testNum: 2,
@@ -43,7 +45,6 @@ describe('SummaryMerger', (): void => {
             });
         });
         describe('(*,true|false)', (): void => {
-
             let generateKeyStub: sinon.SinonStub;
             beforeEach((): void => {
                 generateKeyStub = sinon.stub(mergerInstance, 'generateKey');
