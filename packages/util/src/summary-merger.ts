@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: util
+/*
+ * Package @abfluss/util
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { IDayData, IDaySummary } from '@abfluss/api-types';
@@ -22,7 +23,7 @@ export class SummaryMerger {
      * @param day the day to be added
      * @param force force insert
      */
-    public add(day: IDayData, force: boolean = false, key?: string): void {
+    public add(day: IDayData, force = false, key?: string): void {
         const dayKey: string = key ? key : this.generateKey(day);
         if (this.data[dayKey] && !force) {
             throw new Error('Day already exists in merge');
@@ -44,7 +45,7 @@ export class SummaryMerger {
      * Adds multiple days to the summary
      * @param days The days to be added
      */
-    public addAll(days: IDayData[], force: boolean = false): void {
+    public addAll(days: IDayData[], force = false): void {
         for (const day of days) {
             this.add(day, force);
         }
@@ -58,6 +59,6 @@ export class SummaryMerger {
     }
 
     public contains(key: string): boolean {
-        return (typeof this.data[key] !== 'undefined');
+        return typeof this.data[key] !== 'undefined';
     }
 }

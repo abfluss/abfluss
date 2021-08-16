@@ -1,9 +1,9 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: util
+/*
+ * Package @abfluss/util
+ * Source https://abfluss.github.io/abfluss/
  */
 
 export class FlowDate {
-
     public get date(): Date {
         return this.mDate;
     }
@@ -51,12 +51,12 @@ export class FlowDate {
     }
 
     public toString(): string {
-        let output: string = '';
-        output += (`${this.year}`).padStart(4, '0');
+        let output = '';
+        output += `${this.year}`.padStart(4, '0');
         output += '-';
-        output += (`${this.month}`).padStart(2, '0');
+        output += `${this.month}`.padStart(2, '0');
         output += '-';
-        output += (`${this.day}`).padStart(2, '0');
+        output += `${this.day}`.padStart(2, '0');
         return output;
     }
 

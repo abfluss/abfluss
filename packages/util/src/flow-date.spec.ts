@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: util
+/*
+ * Package @abfluss/util
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { expect } from 'chai';
@@ -102,36 +103,34 @@ describe('flow-date.ts', (): void => {
     describe('class methods', (): void => {
         describe('get date', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it(`should parse ${testDate.date} from ${testDate.from}`, (): void => {
+                it(`should parse ${testDate.date.toString()} from ${testDate.from.toString()}`, (): void => {
                     expect(testDate.from.date.getTime()).to.equal(testDate.date.getTime());
                 });
             });
         });
         describe('nextDay()', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it(`it should skip correctly from ${testDate.from.toString()}`
-                    + ` to ${testDate.to.toString()}`, (): void => {
-                        const calculatedDate: testObject.FlowDate = testDate.from.nextDay();
-                        expect(calculatedDate.day).to.equal(testDate.to.day);
-                        expect(calculatedDate.month).to.equal(testDate.to.month);
-                        expect(calculatedDate.year).to.equal(testDate.to.year);
-                    });
+                it(`it should skip correctly from ${testDate.from.toString()}` + ` to ${testDate.to.toString()}`, (): void => {
+                    const calculatedDate: testObject.FlowDate = testDate.from.nextDay();
+                    expect(calculatedDate.day).to.equal(testDate.to.day);
+                    expect(calculatedDate.month).to.equal(testDate.to.month);
+                    expect(calculatedDate.year).to.equal(testDate.to.year);
+                });
             });
         });
         describe('previousDay()', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it(`it should skip correctly from ${testDate.from.toString()}`
-                    + ` to ${testDate.to.toString()}`, (): void => {
-                        const calculatedDate: testObject.FlowDate = testDate.to.previousDay();
-                        expect(calculatedDate.day).to.equal(testDate.from.day);
-                        expect(calculatedDate.month).to.equal(testDate.from.month);
-                        expect(calculatedDate.year).to.equal(testDate.from.year);
-                    });
+                it(`it should skip correctly from ${testDate.from.toString()}` + ` to ${testDate.to.toString()}`, (): void => {
+                    const calculatedDate: testObject.FlowDate = testDate.to.previousDay();
+                    expect(calculatedDate.day).to.equal(testDate.from.day);
+                    expect(calculatedDate.month).to.equal(testDate.from.month);
+                    expect(calculatedDate.year).to.equal(testDate.from.year);
+                });
             });
         });
         describe('toString()', (): void => {
             testDays.forEach((testDate: ITestDay): void => {
-                it(`should format ${testDate.date} to ${testDate.str}`, (): void => {
+                it(`should format ${testDate.date.toString()} to ${testDate.str}`, (): void => {
                     expect(testDate.from.toString()).to.equal(testDate.str);
                 });
             });
