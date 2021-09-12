@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-types
+/*
+ * Package @abfluss/api-types
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { Schema } from 'jsonschema';
@@ -14,7 +15,8 @@ export const DAY_SUMMARY_SCHEMA: Schema = {
     patternProperties: {
         // the property name will be passed to new RegExp(prop), so backslashes
         // have to be escaped.
-        '^[0-9]{4,4}\-[0-9]{1,2}\-[0-9]{1,2}$': DAY_DATA_SCHEMA,
+        // eslint-disable-next-line no-useless-escape
+        '^[0-9]{4,4}-[0-9]{1,2}-[0-9]{1,2}$': DAY_DATA_SCHEMA,
     },
     type: 'object',
 };

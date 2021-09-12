@@ -41,14 +41,16 @@
     ],
     "scripts": {
         "build": "npm run build:esm && npm run build:cjs && npm run build:types",
-        "build:esm": "tsc --project ./tsconfig.json --module es2015 --outDir dist/esm",
-        "build:cjs": "tsc --project ./tsconfig.json --module commonjs --outDir dist/cjs",
-        "build:types": "tsc --project ./tsconfig.json  -d --declarationDir dist/types --declarationMap --emitDeclarationOnly",
+        "build:esm": "tsc --project ./tsconfig.app.json --module esnext --outDir dist/esm",
+        "build:cjs": "tsc --project ./tsconfig.app.json --module commonjs --outDir dist/cjs",
+        "build:types": "tsc --project ./tsconfig.app.json  -d --declarationDir dist/types --declarationMap --emitDeclarationOnly",
         "test": "mocha --config ../../.mocharc.yml",
         "test:watch": "mocha --config ../../.mocharc.yml --watch",
         "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
-        "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
-        "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
+        "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+        "postlint": "prettier --config ./../../.prettierrc src/**/*.ts --check",
+        "lint:fix": "eslint -c .eslintrc.js --ext .ts ./src --fix",
+        "postlint:fix": "prettier --config ./../../.prettierrc src/**/*.ts --write",
         "docs": "typedoc --options ./typedoc.config.js"
     }
 }

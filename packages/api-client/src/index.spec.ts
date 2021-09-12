@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: api-client
+/*
+ * Package @abfluss/api-client
+ * Source https://abfluss.github.io/abfluss/
  */
 
 import { expect } from 'chai';

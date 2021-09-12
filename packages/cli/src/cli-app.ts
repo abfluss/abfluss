@@ -1,5 +1,6 @@
-/*!
- * Source https://github.com/abfluss/abfluss Package: cli
+/*
+ * Package @abfluss/cli
+ * Source https://abfluss.github.io/abfluss/
  */
 
 interface ICliArgs {
@@ -23,7 +24,6 @@ export class CliApp {
         // this.args = console.log(this.args, process.argv[0], process.argv[1]) as any;
     }
     public start(): void {
-
         // tslint:disable-next-line:no-console
         console.log('yes', this.args.samples);
     }

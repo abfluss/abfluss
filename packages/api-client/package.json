@@ -35,7 +35,7 @@
     "dependencies": {
         "@abfluss/api-types": "^0.2.6",
         "@abfluss/util": "^0.2.6",
-        "axios": "~0.21.1",
+        "axios": "~0.21.4",
         "axios-cookiejar-support": "^1.0.1",
         "jsonschema": "~1.4.0",
         "qs": "^6.10.1",
@@ -47,18 +47,20 @@
     ],
     "scripts": {
         "build": "npm run build:esm && npm run build:cjs && npm run build:types",
-        "build:esm": "tsc --project ./tsconfig.json --module es2015 --outDir dist/esm",
+        "build:esm": "tsc --project ./tsconfig.json --module esnext --outDir dist/esm",
         "build:cjs": "tsc --project ./tsconfig.json --module commonjs --outDir dist/cjs",
         "build:types": "tsc --project ./tsconfig.json  -d --declarationDir dist/types --declarationMap --emitDeclarationOnly",
         "test": "mocha --config ../../.mocharc.yml",
         "test:watch": "mocha --config ../../.mocharc.yml --watch",
         "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
-        "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
-        "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
+        "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+        "postlint": "prettier --config ./../../.prettierrc src/**/*.ts --check",
+        "lint:fix": "eslint -c .eslintrc.js --ext .ts ./src --fix",
+        "postlint:fix": "prettier --config ./../../.prettierrc src/**/*.ts --write",
         "docs": "typedoc --options ./typedoc.config.js"
     },
     "devDependencies": {
-        "@types/qs": "6.9.6",
+        "@types/qs": "6.9.7",
         "@types/tough-cookie": "4.0.1"
     }
 }

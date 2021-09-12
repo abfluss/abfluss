@@ -32,15 +32,15 @@
         "access": "public"
     },
     "devDependencies": {
-        "@types/yargs": "17.0.1",
+        "@types/yargs": "17.0.2",
         "request-debug": "0.2.0"
     },
     "dependencies": {
         "@abfluss/api-client": "^0.2.6",
         "@abfluss/api-types": "^0.2.6",
         "@abfluss/util": "^0.2.6",
-        "chalk": "~4.1.1",
-        "yargs": "~17.0.1"
+        "chalk": "~4.1.2",
+        "yargs": "~17.1.1"
     },
     "files": [
         "dist/*",
@@ -51,8 +51,10 @@
         "test": "mocha --config ../../.mocharc.yml",
         "test:watch": "mocha --config ../../.mocharc.yml --watch",
         "test:coverage": "nyc --nycrc-path ../../.nycrc.json npm run test",
-        "lint": "tslint -c tslint.json -p tsconfig.lint.json src/**/*.ts",
-        "lint:fix": "tslint --fix -c tslint.json -p tsconfig.lint.json src/**/*.ts",
+        "lint": "eslint -c .eslintrc.js --ext .ts ./src",
+        "postlint": "prettier --config ./../../.prettierrc src/**/*.ts --check",
+        "lint:fix": "eslint -c .eslintrc.js --ext .ts ./src --fix",
+        "postlint:fix": "prettier --config ./../../.prettierrc src/**/*.ts --write",
         "docs": "typedoc --options ./typedoc.config.js"
     }
 }
