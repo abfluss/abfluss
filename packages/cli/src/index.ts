@@ -8,6 +8,12 @@ import yargs from 'yargs';
 import { HeartRateDownloader } from './heartrate-downloader';
 import { createSigninMiddleware } from './signin-middleware';
 
+interface IArgs {
+    startdate: string;
+    enddate: string;
+    samples: number;
+    throttle: number;
+}
 /* eslint-disable @typescript-eslint/no-unsafe-member-access,
    @typescript-eslint/no-explicit-any,
    @typescript-eslint/no-unused-vars,
@@ -17,7 +23,7 @@ const inputArgs: any = yargs(process.argv.slice(2))
     .command(
         'download heartrate <startdate> [enddate]',
         'the serve command',
-        (args: yargs.Argv): any => {
+        (args: yargs.Argv<IArgs>): any => {
             return yargs
                 .option('samples', {
                     default: 50000,
@@ -40,7 +46,7 @@ const inputArgs: any = yargs(process.argv.slice(2))
                     type: 'number',
                 });
         },
-        (argv: any): void => {
+        (argv: IArgs): void => {
             const dateRegex = /^([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))$/;
             if (!dateRegex.test(argv.startdate)) {
                 throw new Error('The provided startDate does not seem valid');
