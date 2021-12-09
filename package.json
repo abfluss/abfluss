@@ -3,7 +3,7 @@
   "private": true,
   "devDependencies": {
     "@donmahallem/eslint-config": "0.5.0",
-    "@donmahallem/tslint-config": "0.2.3",
+    "@donmahallem/tslint-config": "0.3.0",
     "@types/chai": "4.3.0",
     "@types/mocha": "9.0.0",
     "@types/node": "16.11.12",
