@@ -8,6 +8,7 @@ import 'mocha';
 import * as sinon from 'sinon';
 import * as merger from './summary-merger';
 
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 describe('SummaryMerger', (): void => {
     describe('add', (): void => {
         let mergerInstance: merger.SummaryMerger;
