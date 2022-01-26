@@ -8,7 +8,7 @@
     "@types/mocha": "9.1.0",
     "@types/node": "16.11.21",
     "@types/sinon": "10.0.8",
-    "chai": "4.3.5",
+    "chai": "4.3.6",
     "commitizen": "4.2.4",
     "conventional-changelog-angular": "5.0.13",
     "cz-conventional-changelog": "3.3.0",
