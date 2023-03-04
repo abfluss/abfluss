@@ -9,7 +9,7 @@
     "@types/node": "16.11.19",
     "@types/sinon": "10.0.6",
     "chai": "4.3.4",
-    "commitizen": "4.2.4",
+    "commitizen": "4.3.0",
     "conventional-changelog-angular": "5.0.13",
     "cz-conventional-changelog": "3.3.0",
     "lerna": "4.0.0",
