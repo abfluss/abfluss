@@ -61,6 +61,6 @@
     },
     "devDependencies": {
         "@types/qs": "6.9.7",
-        "@types/tough-cookie": "4.0.1"
+        "@types/tough-cookie": "4.0.5"
     }
 }
