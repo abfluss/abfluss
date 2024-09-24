@@ -4,11 +4,11 @@
   "devDependencies": {
     "@donmahallem/eslint-config": "1.0.46",
     "@donmahallem/tslint-config": "0.3.2",
-    "@types/chai": "4.3.0",
+    "@types/chai": "4.3.20",
     "@types/mocha": "9.1.0",
     "@types/node": "16.11.26",
     "@types/sinon": "10.0.11",
-    "chai": "4.3.6",
+    "chai": "4.5.0",
     "commitizen": "4.2.4",
     "conventional-changelog-angular": "5.0.13",
     "cz-conventional-changelog": "3.3.0",
